@@ -14,17 +14,6 @@ export const sendApiResponse = <T>(
   data: T | null,
   message: string | null
 ): void => {
-  switch (message) {
-    case 'username':
-      message = 'Username Taken';
-      break;
-    case 'email':
-      message = 'Email Taken';
-      break;
-    default:
-      message;
-      break;
-  }
   const apiResponse: ApiResponse<T> = {
     status,
     code,
